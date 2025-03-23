@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 /*
     useRef사용법2. 애니메이션 제어
 */
 const Step02 = () => {
+    const aniRef = useRef(null);
     return (
-        <div>Step02</div>
+        <>
+            <div ref={aniRef} className='box'></div>
+            <button onClick={()=>{
+                aniRef.current.classList.add('animate');
+            }}>CLICK</button>
+        </>
     )
 }
 
