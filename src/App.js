@@ -1,4 +1,5 @@
 import './App.css';
+import Event01 from './event/event01';
 import Step01 from './step/step01';
 import Step02 from './step/step02';
 import Step03 from './step/step03';
@@ -18,7 +19,8 @@ function App() {
       {/* <Step05 /> */}
       {/* <Step06 /> */}
       {/* <Step07 /> */}
-      <Step08 />
+      {/* <Step08 /> */}
+      <Event01 />
     </>
   );
 }
