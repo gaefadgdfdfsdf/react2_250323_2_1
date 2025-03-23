@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 /*
     [ useEffect ]
@@ -6,6 +6,16 @@ import React, { useState } from 'react'
 */
 const Step05 = () => {
     const [count, setCount] = useState(0);
+
+    useEffect(()=>{
+        // 컴포넌트가 렌더링될 때마다 실행
+        console.log('컴포넌트가 렌더링됨');
+
+        // 선택사항 : 컴포넌트가 제거(언마운트)되거나 업데이트 되기 전 실행
+        return ()=> {
+            console.log('클린업');
+        }
+    })
     return (
         <>
             <p>카운트 : {count}</p>
